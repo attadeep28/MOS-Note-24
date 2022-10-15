@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "263719059981",
+    "firebase_url": "https://upload-pdf-to-firebase-default-rtdb.firebaseio.com",
+    "project_id": "upload-pdf-to-firebase",
+    "storage_bucket": "upload-pdf-to-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263719059981:android:28349397cad932946e8b44",
+        "android_client_info": {
+          "package_name": "com.example.note24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCROXnLaeNzD5BHwkdYg9yWAWVF7psUxKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263719059981:android:1e7f8ce2fdbb2e726e8b44",
+        "android_client_info": {
+          "package_name": "com.example.notes24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCROXnLaeNzD5BHwkdYg9yWAWVF7psUxKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263719059981:android:6180f6653436c5916e8b44",
+        "android_client_info": {
+          "package_name": "com.example.uploadpdf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCROXnLaeNzD5BHwkdYg9yWAWVF7psUxKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263719059981:android:8f693667b86062fe6e8b44",
+        "android_client_info": {
+          "package_name": "com.example.uploadpdftofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCROXnLaeNzD5BHwkdYg9yWAWVF7psUxKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263719059981-d6k2rbamogk2vndmeqj1s9ooj9eo368q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,7 +31,7 @@ public class SubjectsPage extends AppCompatActivity {
 
 
         listView = findViewById(R.id.sub_listView);
-        mylist = new ArrayList<>();
+//        mylist = new ArrayList<>();
         sem_name = getIntent().getStringExtra("sem_name");
         path = getIntent().getStringExtra("path");
         viewAllFiles();
@@ -57,6 +57,7 @@ public class SubjectsPage extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mylist = new ArrayList<>();
                 for(DataSnapshot postSnapshot: snapshot.getChildren()){
                     DataSnapshot object = postSnapshot;
                     mylist.add(object.getKey().toString());

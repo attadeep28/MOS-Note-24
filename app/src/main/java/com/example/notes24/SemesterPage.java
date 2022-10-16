@@ -31,7 +31,7 @@ public class SemesterPage extends AppCompatActivity {
 
 
         listView = findViewById(R.id.sem_list_view);
-        mylist = new ArrayList<>();
+//        mylist = new ArrayList<>();
         dep_name = getIntent().getStringExtra("Department");
         viewAllFiles();
 
@@ -51,10 +51,12 @@ public class SemesterPage extends AppCompatActivity {
     }
 
     private void viewAllFiles() {
+
         databaseReference = FirebaseDatabase.getInstance().getReference("Departments/"+dep_name+"/");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mylist = new ArrayList<>();
                 for(DataSnapshot postSnapshot: snapshot.getChildren()){
                     DataSnapshot object = postSnapshot;
                     mylist.add(object.getKey().toString());

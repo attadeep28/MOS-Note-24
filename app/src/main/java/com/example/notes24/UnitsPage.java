@@ -50,7 +50,7 @@ public class UnitsPage extends AppCompatActivity {
 
 
         listView = findViewById(R.id.listViewUnits);
-        mylist = new ArrayList<>();
+//        mylist = new ArrayList<>();
 
         viewAllFiles();
 
@@ -71,6 +71,7 @@ public class UnitsPage extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mylist = new ArrayList<>();
                 for(DataSnapshot postSnapshot: snapshot.getChildren()){
                     Model model = postSnapshot.getValue(Model.class);
                     mylist.add(model);

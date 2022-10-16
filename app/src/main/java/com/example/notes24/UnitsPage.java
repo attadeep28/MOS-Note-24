@@ -77,12 +77,12 @@ public class UnitsPage extends AppCompatActivity {
                     mylist.add(model);
 
                 }
-                String[] uploads = new String[mylist.size()];
+                ArrayList<String> uploads = new ArrayList<>();
 
                 for(int i = 0; i < mylist.size(); i++){
-                    uploads[i] = mylist.get(i).getName();
+                    uploads.add(mylist.get(i).getName());
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line,uploads);
+                Adapter adapter = new Adapter(getApplicationContext(),uploads);
                 listView.setAdapter(adapter);
 
             }

@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.OpenableColumns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,6 +56,7 @@ public class FileUploadPage extends AppCompatActivity {
             public void onClick(View view) {
                 selectPdfFile();
             }
+
         });
 
         upload.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +79,7 @@ public class FileUploadPage extends AppCompatActivity {
         if(requestCode == 11 && resultCode==RESULT_OK &&
                 data!=null && data.getData()!=null){
             uri = data.getData();
+            fileName.setText(getFileName(uri).substring(0,getFileName(uri).length()-4));
 //            uploadPdfFile(data.getData());
         }
     }
@@ -117,5 +122,28 @@ public class FileUploadPage extends AppCompatActivity {
                 progressDialog.setProgress((int) progress);
             }
         });
+    }
+
+    @SuppressLint("Range")
+    public String getFileName(Uri uri) {
+        String result = null;
+        if (uri.getScheme().equals("content")) {
+            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        if (result == null) {
+            result = uri.getPath();
+            int cut = result.lastIndexOf('/');
+            if (cut != -1) {
+                result = result.substring(cut + 1);
+            }
+        }
+        return result;
     }
 }

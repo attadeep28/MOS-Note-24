@@ -62,7 +62,7 @@ public class SemesterPage extends AppCompatActivity {
                     mylist.add(object.getKey().toString());
                 }
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line,mylist);
+                Adapter adapter = new Adapter(getApplicationContext(),mylist);
                 listView.setAdapter(adapter);
             }
 

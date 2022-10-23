@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/toolbar"
-        app:tabTextColor = "#77a3a7"
+        app:tabTextColor = "#CE9BE8"
         app:tabSelectedTextColor="@color/white"
         app:tabIndicatorColor = "@color/white"
         android:background="#8758FF">

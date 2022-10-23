@@ -6,7 +6,7 @@
     app:cardCornerRadius="5dp"
     app:cardElevation="30dp"
     android:layout_marginVertical="20dp"
-    android:backgroundTint="#3C4048">
+    android:backgroundTint="#8758FF">
     <TextView
         android:id="@+id/TextView"
         android:layout_width="match_parent"

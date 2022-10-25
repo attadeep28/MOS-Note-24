@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Notes 24</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_sentence">Notes 24 Is App Made By YCCE Students For YCCE Students To Provide Them Accesses To Notes From Anywhere Any Time 24/7</string>
 </resources>

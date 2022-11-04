@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".HomeFragment">
 
     <LinearLayout
@@ -22,232 +23,253 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-            <GridLayout
-                android:layout_centerInParent="true"
+
+            <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:rowCount="3"
-                >
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/CT"
-                    android:layout_margin="10dp"
+                android:layout_centerInParent="true">
+                <GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/ct_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/computer_technology"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ctech"
-                            android:layout_below="@id/ct_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                    android:layout_centerInParent="true"
+                    android:columnCount="3"
+                    android:rowCount="3">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ETC"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/etc_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/electronics"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ETC"
-                            android:layout_below="@id/etc_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/EL"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/el_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/electrical"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Electrical"
-                            android:layout_below="@id/el_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ME"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/Me_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/mechanical_removebg"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mechanical"
-                            android:layout_below="@id/Me_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:id="@+id/ct_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/computer_technology" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/CE"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/Cv_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/civil"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Civil"
-                            android:layout_below="@id/Cv_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ct_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="Ctech"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/IT"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/It_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/information_tech"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="IT"
-                            android:layout_below="@id/It_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ETC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/CSE"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/cse_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/cse"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CSE"
-                            android:layout_below="@id/cse_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/first_year"
-                    android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/FY_icon"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/first_year"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="First Year"
-                            android:layout_below="@id/FY_icon"
-                            android:textColor="#8758FF"
-                            android:textStyle="bold"
-                            android:layout_centerHorizontal="true"/>
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:id="@+id/etc_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/electronics" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/etc_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="ETC"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/EL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/el_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/electrical" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/el_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="Electrical"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/Me_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/mechanical_removebg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/Me_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="Mechanical"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/Cv_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/civil" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/Cv_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="Civil"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/IT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/It_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/information_tech" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/It_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="IT"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CSE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/cse_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/cse" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cse_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="CSE"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/first_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/FY_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/first_year" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/FY_icon"
+                                android:layout_centerHorizontal="true"
+                                android:text="First Year"
+                                android:textColor="#8758FF"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
 
 
-            </GridLayout>
+                </GridLayout>
+            </ScrollView>
         </RelativeLayout>
     </LinearLayout>
 

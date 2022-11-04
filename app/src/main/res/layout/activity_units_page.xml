@@ -50,12 +50,12 @@
         android:clickable="true"
         android:backgroundTint="@color/white"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         app:srcCompat="@drawable/ic_baseline_add_24"
         android:scaleType="centerCrop"
         app:rippleColor="@color/white"
         app:fabSize="auto"
         android:tint="@color/white"
         app:borderWidth="0dp"
-        />
+        android:focusable="true" />
 </RelativeLayout>

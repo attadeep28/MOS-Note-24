@@ -3,6 +3,7 @@ package com.example.notes24;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,11 +25,16 @@ public class SemesterPage extends AppCompatActivity {
     List<String> mylist;
     DatabaseReference databaseReference;
     String dep_name;
+    ProgressDialog pd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_semester_page);
 
+        pd = new ProgressDialog(this);
+        pd.setMessage("Loading...");
+        pd.show();
 
         listView = findViewById(R.id.sem_list_view);
 //        mylist = new ArrayList<>();
@@ -64,7 +70,7 @@ public class SemesterPage extends AppCompatActivity {
 
                 Adapter adapter = new Adapter(getApplicationContext(),mylist);
                 listView.setAdapter(adapter);
-
+                pd.dismiss();
             }
 
             @Override

@@ -3,11 +3,11 @@ package com.example.notes24;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -24,11 +24,16 @@ public class SubjectsPage extends AppCompatActivity {
     ListView listView;
     List<String> mylist;
     DatabaseReference databaseReference;
+    ProgressDialog pd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subjects_page);
 
+        pd = new ProgressDialog(this);
+        pd.setMessage("Loading...");
+        pd.show();
 
         listView = findViewById(R.id.sub_listView);
 //        mylist = new ArrayList<>();
@@ -65,6 +70,7 @@ public class SubjectsPage extends AppCompatActivity {
 
                 Adapter adapter = new Adapter(getApplicationContext(),mylist);
                 listView.setAdapter(adapter);
+                pd.dismiss();
             }
 
             @Override

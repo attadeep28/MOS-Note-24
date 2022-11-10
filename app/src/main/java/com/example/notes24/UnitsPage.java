@@ -3,13 +3,12 @@ package com.example.notes24;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -27,10 +26,16 @@ public class UnitsPage extends AppCompatActivity {
     DatabaseReference databaseReference;
     String sub_name,path;
     FloatingActionButton uploadPdf;
+    ProgressDialog pd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_units_page);
+
+        pd = new ProgressDialog(this);
+        pd.setMessage("Loading...");
+        pd.show();
 
         sub_name = getIntent().getStringExtra("sub_name");
         path = getIntent().getStringExtra("path");
@@ -84,7 +89,7 @@ public class UnitsPage extends AppCompatActivity {
                 }
                 Adapter adapter = new Adapter(getApplicationContext(),uploads);
                 listView.setAdapter(adapter);
-
+                pd.dismiss();
             }
 
             @Override

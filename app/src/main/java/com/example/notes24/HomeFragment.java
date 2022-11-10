@@ -43,7 +43,54 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
+        etc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","ETC");
+                startActivity(intent);
+            }
+        });
+        me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","ME");
+                startActivity(intent);
+            }
+        });
+        it.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","IT");
+                startActivity(intent);
+            }
+        });
+        cse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","CSE");
+                startActivity(intent);
+            }
+        });
+        el.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","EL");
+                startActivity(intent);
+            }
+        });
+        ce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),SemesterPage.class);
+                intent.putExtra("Department","CV");
+                startActivity(intent);
+            }
+        });
         return v;
 
     }

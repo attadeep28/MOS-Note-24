@@ -64,6 +64,7 @@ public class SemesterPage extends AppCompatActivity {
 
                 Adapter adapter = new Adapter(getApplicationContext(),mylist);
                 listView.setAdapter(adapter);
+
             }
 
             @Override

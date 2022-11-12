@@ -47,7 +47,7 @@ public class UnitsPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),FileUploadPage.class);
+                Intent intent = new Intent(getApplicationContext(), FileUploadAuthentication.class);
                 intent.putExtra("path",path+sub_name+"/");
                 startActivity(intent);
             }

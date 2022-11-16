@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import java.net.URLEncoder;
 
@@ -23,7 +24,7 @@ public class PdfViewPage extends AppCompatActivity {
         String pdf_url = getIntent().getStringExtra("pdf_url");
         ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("PDF");
-        pd.setMessage("Loading..");
+        pd.setMessage("Loading...");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
@@ -46,7 +47,10 @@ public class PdfViewPage extends AppCompatActivity {
         try {
             url = URLEncoder.encode(pdf_url,"UTF-8");
         }catch (Exception ex){}
-
+        
+        if(url.equals("")) {
+            Toast.makeText(this, "Kuch nahi hai broo", Toast.LENGTH_SHORT).show();
+        }
         webView.loadUrl("https://docs.google.com/gview?embedded=true&url="+url);
     }
 }

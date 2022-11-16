@@ -22,8 +22,8 @@ public class FileUploadAuthentication extends AppCompatActivity {
         accessCode = (EditText) findViewById(R.id.accessCode);
         continueButton = (Button) findViewById(R.id.continueButton);
         path = getIntent().getStringExtra("path");
-
         String adminCode = new String("1234567");
+        accessCode.requestFocus();
 
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override

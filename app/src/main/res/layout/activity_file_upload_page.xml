@@ -17,22 +17,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/SelectFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:backgroundTint="#8758FF"
+        android:text="SELECT FILE"
+        app:layout_constraintBottom_toTopOf="@id/fileName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_image" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="70dp"
+        android:textSize="30sp"
         android:gravity="center"
         android:text="Select File"
-        app:layout_constraintBottom_toTopOf="@+id/SelectFile"
+        app:layout_constraintBottom_toTopOf="@+id/upload_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/SelectFile"
+        android:id="@+id/upload_image"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_margin="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/fileName"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/SelectFile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,14 +55,16 @@
 
     <EditText
         android:id="@+id/fileName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter File Name"
+        android:layout_marginHorizontal="50dp"
+        android:paddingLeft="10sp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/Upload"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SelectFile"
         app:layout_constraintVertical_bias="0.5" />

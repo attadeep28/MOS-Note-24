@@ -5,10 +5,13 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -32,5 +35,18 @@ public class MainActivity extends AppCompatActivity {
         vpAdapter.addFragment(new AboutFragment(),"About");
 
         viewPager.setAdapter(vpAdapter);
+    }
+
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit?")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        MainActivity.super.onBackPressed();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .create().show();
     }
 }

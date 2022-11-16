@@ -33,11 +33,14 @@
             android:layout_height="50sp"
             android:layout_below="@id/app_logo"
             android:layout_marginTop="70dp"
+            android:inputType="numberPassword"
             android:layout_centerHorizontal="true"
             android:hint="Access Code"
             android:textAlignment="center"
             android:layout_marginHorizontal="20sp"
-            android:textSize="20sp"/>
+            android:textSize="20sp">
+            <requestFocus/>
+        </EditText>
 
         <Button
             android:id="@+id/continueButton"

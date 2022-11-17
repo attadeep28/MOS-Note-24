@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/white"
     tools:context=".SemesterPage">
     <androidx.appcompat.widget.Toolbar
         android:layout_alignParentTop="true"
@@ -33,7 +33,7 @@
         android:id="@+id/sem_list_view"
         android:padding="10sp"
         android:dividerHeight="10sp"
-        android:divider="#fff"
+        android:divider="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

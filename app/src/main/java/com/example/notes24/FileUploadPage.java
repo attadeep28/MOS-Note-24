@@ -28,7 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 public class FileUploadPage extends AppCompatActivity {
-    Button select;
+    ImageView select;
     EditText fileName;
     Button upload;
     String path;
@@ -92,7 +92,7 @@ public class FileUploadPage extends AppCompatActivity {
 
     private void uploadPdfFile(Uri data) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Uploading...");
+        progressDialog.setTitle("Uploading..");
         progressDialog.show();
 
 
@@ -109,9 +109,6 @@ public class FileUploadPage extends AppCompatActivity {
                 databaseReference.child(databaseReference.push().getKey()).setValue(model);
                 Toast.makeText(FileUploadPage.this, "Successful.", Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
